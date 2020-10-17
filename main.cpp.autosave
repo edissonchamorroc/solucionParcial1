@@ -1,0 +1,14 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Hello World!" << endl;
+    return 0;
+}
+
+void disparoOfensivo(double xposo,double xposo,int alturao,double ango,int velof, double *tiempo){
+    double *datosofensivos=new double[5];
+    
+}
