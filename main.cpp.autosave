@@ -1,0 +1,45 @@
+#include <iostream>
+#include<math.h>
+using namespace std;
+
+int main()
+{   double *arregloOfensivo=new double[4],*arregloDefensivo=new double[4],dato;//x,y,angulo,velocidad
+    cout<<"Ingrese datos del canon ofensivo de la siguiente manera: posicion en x\nposicion en y\nvelocidad inicial de disparo\nangulo de disparo";    
+    for(int i=0;i<5;i++){
+        cout<<"Dato"<<i+1<<": ";
+        cin>>dato;
+        arregloOfensivo[i]=dato;
+    }
+    cout<<"Ingrese datos del disparo ofensivo de la siguiente manera: posicion en x\nAltura de canon";    
+    for(int i=0;i<2;i++){
+        cout<<"Dato"<<i+1<<": ";
+        cin>>dato;
+        arregloDefensivo[i]=dato;
+    } 
+   
+    
+    return 0;
+}
+double distanciaentrecanones(double *arregloO,double *arregloD){
+    double distancia;
+    distancia=*(arregloD+0)-*(arregloO+0);
+}
+void sensorO(double *arregloO,int distancia){
+
+}
+void tiempo(double *arregloO,bool colision){
+    double tiempo[1];
+    while(*(arregloO+1)!=0 | colision==false){
+        *(tiempo+0)+=0.1;
+    }
+}
+
+void disparoOfensivo(double *datosofensivos, double *tiempo){
+    double g=9.8,vytO=0.0;
+
+    while(*tiempo>=0){
+        *(datosofensivos+0)=*(datosofensivos+0)+cos(*(datosofensivos+4))*(*tiempo);
+        vytO=*(datosofensivos+4)*sin(*(datosofensivos+3))-g*(*tiempo);
+        *(datosofensivos+1)=*(datosofensivos+1)+vytO-(0.5)*g*(*tiempo);
+    }
+}
